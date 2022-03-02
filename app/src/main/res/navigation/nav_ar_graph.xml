@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_ar_graph"
+    app:startDestination="@id/ArFragment">
+
+    <fragment
+        android:id="@+id/ArFragment"
+        android:name="com.shinaz.newapp.ui.ar.ui.ArFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_ArFragment_to_ArPutFragment"
+            app:destination="@id/ArPutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ArPutFragment"
+        android:name="com.shinaz.newapp.ui.ar.ui.after.ARPutFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_ArPutFragment_to_ArFragment"
+            app:destination="@id/ArFragment" />
+    </fragment>
+</navigation>
